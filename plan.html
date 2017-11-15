@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Plan your Goal!</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <!-- CSS Style -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div class="container">
+
+  <!-- Header -->
+      <header class="masthead clearfix">
+                <div class="inner">
+                  <h3 class="masthead-brand"><a href="index.html">Holistic</a></h3>
+
+                </div>
+              </header>
+
+  <!-- Body -->
+  <div class="row justify-content-center">
+  <div class="col-12 col-md-10">
+    <h2 id="goal_name"></h2>
+    <h3> Break down your goal into actionable tasks:</h3>
+
+<!-- Card for Step #1 -->
+
+<!-- div for only cards -->
+<div id="card_container">
+
+    <div class="card" >
+  <div class="card-header" data-toggle="collapse" href="#card1" aria-expanded="true" aria-controls="card-header">
+      <div class="signifier">
+        <i class="fa fa-chevron-right"></i>  <i class="fa fa-chevron-down"></i>
+      </div>
+      <span id="step_1"></span> <span class="badge badge-pill badge-secondary">Suggested</span><!-- <button type="button" class="btn btn-outline-danger btn-sm right">X</button>-->
+  </div>
+  <div class="collapse show" id="card1">
+    <div class="card-body">
+   <p class="card-text">These are recommendations based on how other Holistic users are accomplishing this task.</p>
+   <a id="s1_link_1" href="" target="_blank" role="button" class="btn btn-outline-dark">San Diego Salsa Lessons</a>
+   <a id="s1_link_2" href="" target="_blank" role="button" class="btn btn-outline-dark">Groupons.com</a>
+    </div>
+  </div>
+</div>
+
+<!-- Card for Step #2 -->
+<div class="card">
+<div class="card-header" data-toggle="collapse" href="#card2" aria-expanded="false" aria-controls="card2">
+  <div class="signifier">
+    <i class="fa fa-chevron-right"></i>  <i class="fa fa-chevron-down"></i>
+  </div>
+  <span id="step_2"></span> <span class="badge badge-pill badge-secondary">Suggested</span><!-- <button type="button" class="btn btn-outline-danger btn-sm right">X</button>-->
+</div>
+<div class="collapse" id="card2">
+<div class="card-body">
+<p class="card-text">These are recommendations based on how other Holistic users are accomplishing this task.</p>
+<a id="s2_link_1" href="" target="_blank" role="button" class="btn btn-outline-dark">Apple Music</a>
+<a id="s2_link_2" href="" target="_blank" role="button" class="btn btn-outline-dark">Spotify</a>
+</div>
+</div>
+</div>
+
+
+
+<!-- Card for Step #3 -->
+<div class="card">
+<div class="card-header" data-toggle="collapse" href="#card3" aria-expanded="false" aria-controls="card3">
+  <div class="signifier">
+    <i class="fa fa-chevron-right"></i>  <i class="fa fa-chevron-down"></i>
+  </div>
+  <span id="step_3"></span> <span class="badge badge-pill badge-secondary">Suggested</span><!-- <button type="button" class="btn btn-outline-danger btn-sm right">X</button>-->
+</div>
+<div class="collapse" id="card3">
+<div class="card-body">
+<p class="card-text">These are recommendations based on how other Holistic users are accomplishing this task.</p>
+<a id="s3_link_1" href="" role="button" target="_blank" class="btn btn-outline-dark">Salsa Shoes On Amazon</a>
+<a id="s3_link_2" href="" role="button" target="_blank" class="btn btn-outline-dark">DanceWear Solution</a>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+</div>
+
+<!-- Add step button -->
+<a role="button" id="addStepButton" class="btn btn-primary stepclick">+ Add Step</a>
+
+<!-- Create Goal Button -->
+<a href="overview.html" role="button" class="btn btn-outline-primary" style="float:right; margin-bottom: 100px;">Create Goal!</a>
+
+
+
+    <!-- Contaner and Wrapper -->
+      </div>
+    </div>
+  </div>
+
+
+
+    <!-- database -->
+    <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyD0S8-fLrEls5JgrqQRq_x4Te2Ynp7DS_g",
+        authDomain: "holistic-b1275.firebaseapp.com",
+        databaseURL: "https://holistic-b1275.firebaseio.com",
+        projectId: "holistic-b1275",
+        storageBucket: "holistic-b1275.appspot.com",
+        messagingSenderId: "214039989205"
+      };
+      firebase.initializeApp(config);
+    </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+    <!-- Script to retrieve data from database -->
+    <script src="plan.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  </body>
+</html>

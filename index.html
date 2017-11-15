@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyD0S8-fLrEls5JgrqQRq_x4Te2Ynp7DS_g",
+        authDomain: "holistic-b1275.firebaseapp.com",
+        databaseURL: "https://holistic-b1275.firebaseio.com",
+        projectId: "holistic-b1275",
+        storageBucket: "holistic-b1275.appspot.com",
+        messagingSenderId: "214039989205"
+      };
+      firebase.initializeApp(config);
+
+    </script>
+    <script src = "main.js"></script>
+
+    <title>Hello, world!</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <!-- CSS Style -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/home.css" rel="stylesheet">
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+  </head>
+  <body>
+      <div class="container">
+
+  <!-- Background video: credits https://slicejack.com/fullscreen-html5-video-background-css/ -->
+          <div class="fullscreen-bg">
+            <video loop muted autoplay poster="images/home.png" class="fullscreen-bg__video">
+                <source src="video/holistic.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <!-- Header -->
+            <header class="masthead clearfix">
+                      <div class="inner">
+                        <div class=hometitle>
+                        <h3 class="masthead-brand">Holistic</h3>
+                        <nav class="nav nav-masthead">
+                          <button class="btn btn-link" onclick="document.getElementById('id01').style.display='block'">Login</button>
+                        </nav>
+                      </div>
+                        </div>
+                    </header>
+
+        <!-- Login Modal -->
+        <div id="id01" class="modal">
+
+      <!-- Modal Content -->
+      <div class="container">
+        <div class="row justify-content-md-center">
+        <div class="col-12 col-md-6">
+      <form action="overview.html">
+      <div class="card home corner">
+      <div class="card-body">
+      <h1 style="color:#000; float:left;">Log In</h1>  <span onclick="document.getElementById('id01').style.display='none'"
+      class="close" title="Close Modal">&times;</span>
+    </br>
+    </br>
+    </br>
+      <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+      </div>
+      <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+    </div>
+      </form>
+    </div>
+    </div>
+    </div>
+    </div>
+
+    <!-- Body -->
+
+    <div class="row justify-content-center">
+    <div class="col-12 col-md-10">
+     <div class="home">
+        <h1>Plan smart.</br> Do the things you love. </h1>
+
+          <div class="form-group row">
+            <div class="col-12">
+              <form action="plan.html">
+                <div class="form-row">
+                  <div class="col">
+                    <input type="text" id="goal_submit" class="form-control" placeholder="Type in a goal you want to achieve">
+                  </div>
+                  <button type="submit" onclick="store()" class="btn btn-primary">Enter</button>
+
+                  <!-- Script to place goal name into local storage -->
+                  <script>
+                      function store(){
+                        var goal = document.getElementById("goal_submit");
+
+                        localStorage.setItem("goal", goal.value);
+                      }
+
+                  </script>
+
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+
+    <!-- Contaner and Wrapper -->
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  </body>
+</html>
